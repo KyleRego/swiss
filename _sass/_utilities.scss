@@ -10,6 +10,14 @@
   }
 }
 
+.h0-small {
+  font-size: $h0-mobile * 3 / 5 ;
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $h0-desktop * 3 / 5 ;
+  }
+}
+
 .text-right { text-align: right; }
 
 .no-underline {
