@@ -21,6 +21,37 @@ code {
 }
 
 
+// MathJax 
+
+div.MathJax_Display {
+  font-size: $prose-font-size;
+  margin-bottom: 1em;
+  width: 100%;
+
+  @media (min-width: $breakpoint-lg) {
+    width: (10 / 12 * 100%); // matches col-10
+  }
+}
+
+// Return to top of article button
+
+.to-top-container {
+  display: none;
+
+  @media (min-width: $breakpoint-lg) {
+    bottom: 0;
+    position: sticky;
+    display: flex;
+    justify-content: right;
+    height: 3rem;
+  }
+}
+
+.to-top-link {
+  font-size: $prose-font-size;
+  text-decoration: none !important;
+}
+
 .prose {
 
 a {
@@ -40,16 +71,6 @@ p, ol, ul {
     width: (10 / 12 * 100%); // matches col-10
   }
 
-}
-
-div.MathJax_Display {
-  font-size: $prose-font-size;
-  margin-bottom: 1em;
-  width: 100%;
-
-  @media (min-width: $breakpoint-lg) {
-    width: (10 / 12 * 100%); // matches col-10
-  }
 }
 
 ul, ol {
