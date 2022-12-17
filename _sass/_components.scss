@@ -26,7 +26,9 @@ code {
 div.MathJax_Display {
   font-size: $prose-font-size;
   margin-bottom: 1em;
-  width: 100%;
+  max-width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
 
   @media (min-width: $breakpoint-lg) {
     width: (10 / 12 * 100%); // matches col-10
@@ -86,13 +88,9 @@ li {
 }
 
 img {
-
   max-width: 100%;
-
-  @media (min-width: $breakpoint-lg) {
-    max-width: (12 / 10 * 100%); // make image fill width of container on desktop
-  }
-
+  display: block;
+  margin: auto;
 }
 
 blockquote {

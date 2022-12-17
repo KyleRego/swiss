@@ -9,13 +9,16 @@ layout: default
   >{{ page.title }}</h1>
   
     <div class="col-4 sm-width-full mt-1 border-top-thin ">
-      <p class="mb-3 py-2 bold h4"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+      <p class="mb-3 py-2 bold h4">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      </p>
     </div>
 
     <div class="prose" itemprop="articleBody">
         {{ page.excerpt }}
         <div>
           {{ content | remove_first:page.excerpt }}
+          {% include book_attribution.html %}
           {% unless page.short %}
           <div class="to-top-container">
             <a href="#article" title="Return to top" class="to-top-link">🎈</a>
