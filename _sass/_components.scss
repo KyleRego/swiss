@@ -9,7 +9,7 @@ pre {
   overflow-x: auto;
 
   @media (min-width: $breakpoint-lg) {
-    width: (9 / 12 * 100%); // matches col-9
+    width: (9 / 12 * 100%);
     overflow-x: visible;
   }
 }
@@ -31,7 +31,7 @@ div.MathJax_Display {
   overflow-x: auto;
 
   @media (min-width: $breakpoint-lg) {
-    width: (10 / 12 * 100%); // matches col-10
+    width: (10 / 12 * 100%);
   }
 }
 
@@ -75,7 +75,7 @@ p, ol, ul {
   width: 100%;
 
   @media (min-width: $breakpoint-lg) {
-    width: (10 / 12 * 100%); // matches col-10
+    width: (10 / 12 * 100%);
   }
 
 }
@@ -99,25 +99,12 @@ img {
 }
 
 blockquote {
-//   line-height: 1.375;
   padding-left: 20px;
-//   margin: 40px 0 40px -16px;
   border-left: $spacer-1 solid $color-border;
   font-style: italic;
 
-//   p {
-//     font-size: 24px;
-//   }
-
   @media (min-width: $breakpoint-lg) {
     padding-left: $spacer-3;
-//     margin: $spacer-4 0 $spacer-4 -40px;
-//     max-width: (11 / 10 * 100%);
-
-//     p {
-//       font-size: 32px;
-//     }
-
   }
 
 }

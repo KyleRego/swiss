@@ -5,9 +5,9 @@
 
   <body>
 
-    <div>
+    <div class="home-colorful-background">
 
-      <header class="header-background">
+      <header>
 
         <div class="clearfix border-bottom-thick header-border">
           <ul class="list-reset right py-1 header-text font-smoothing">
@@ -49,13 +49,34 @@
           {% include post_block.html %}
         {% endfor %}
 
-        <h2 id="notes" class="lh-condensed col-9 mt-6">
+        <div id="notes"></div>
+        <h2 class="lh-condensed col-9 mt-6">
           Notes
         </h2>
+        <div class="prose mt-1">
+          <ul>
+            <li><h3 class="mt-1">Physics</h3>
+            <ul>
+              {% for post in site.physics_notes %}
+                {% include note_block.html %}
+              {% endfor %}
+            </ul></li>
 
-        {% for post in site.notes %}
-          {% include note_block.html %}
-        {% endfor %}
+
+            <li><h3 class="mt-1">Computer Science</h3>
+            <ul>
+              {% for post in site.computer_science_notes %}
+                {% include note_block.html %}
+              {% endfor %}
+            </ul></li>
+
+            <li><h3 class="mt-1">Software development</h3>
+            <ul>
+              {% for post in site.software_development_notes %}
+                {% include note_block.html %}
+              {% endfor %}
+            </ul></li>
+        </ul>
       </div>
     </div>
 

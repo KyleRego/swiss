@@ -15,18 +15,18 @@ $color-text-accent: $blue !default;
 $color-code: $blue !default;
 $color-primary-link: $blue !default;
 
-$homepage-header-background-image: 
-  linear-gradient(0deg, rgba(255, 255, 255, 1), 65%,
+$homepage-colorful-background-image: 
+  linear-gradient(0deg, rgba(255, 255, 255, 1), 70%,
                           rgba(255, 255, 255, 0)),
 
-  linear-gradient(70deg, rgba(28, 250, 46, 0.9) 0%,
-                            rgba(252, 255, 101, 0) 39%),
+  linear-gradient(70deg, rgba(28, 250, 46, 0.9) 15%,
+                            rgba(252, 255, 101, 0) 45%),
 
-  linear-gradient(164deg, rgb(117, 246, 255) 25.23%,
-                             rgba(70, 255, 188, 0) 73%),
+  linear-gradient(164deg, rgb(117, 246, 255) 15%,
+                             rgba(70, 255, 188, 0) 45%),
 
-  linear-gradient(100deg, rgb(138, 255, 109) 1.14%,
-                            rgb(204, 0, 255) 2%);
+  linear-gradient(100deg, rgb(138, 255, 109) 5%,
+                            rgb(204, 0, 255) 90%);
 
 .font-smoothing {
   -webkit-font-smoothing: antialiased;
