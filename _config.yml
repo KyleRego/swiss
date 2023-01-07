@@ -1,33 +1,29 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole site, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+remote_theme: KyleRego/swiss
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Swiss Jekyll Theme
-description: A bold typographic theme inspired by Swiss design.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_repo: jekyll # the GitHub repo name for your project
-github_username: jekyll
+title: Kyle Rego
+description: A Ruby on Rails weblog that is currently focused on book reviews.
+baseurl: ""
+url: "https://kylerego.github.io"
+email: regoky@outlook.com
 
-# Optional social link, you can choose from the following options:
-# twitter (default), instagram, medium, or dribbble
-social_link: twitter
-social_username: jekyllrb
+github_repo: KyleRego.github.io
+github_username: KyleRego
 
-# Set theme color here
-# Choose from: black (default), blue, gray, magenta, orange, red, white, and yellow.
-theme_color: black
+linkedin_url: https://www.linkedin.com/in/kyle-rego-117b25139/
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+
+google_analytics:
+emoji: 🙃
+
+collections_dir: collections
+
+collections:
+  computer_science_notes:
+    output: true
+  physics_notes:
+    output: true
+  software_development_notes:
+    output: true
