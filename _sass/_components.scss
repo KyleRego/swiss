@@ -7,11 +7,6 @@ pre {
   padding-left: 16px;
   width: 100%;
   overflow-x: auto;
-
-  @media (min-width: $breakpoint-lg) {
-    width: (9 / 12 * 100%);
-    overflow-x: visible;
-  }
 }
 
 code {
@@ -19,7 +14,6 @@ code {
   font-size: $body-font-size;
   padding: 1px 0px;
 }
-
 
 // MathJax 
 
