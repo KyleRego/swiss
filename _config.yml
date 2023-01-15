@@ -1,25 +1,31 @@
-remote_theme: KyleRego/swiss
+remote_theme: # <Your GitHub username>/swiss
 
-title: Kyle Rego
-description: A Ruby on Rails weblog that is currently focused on book reviews.
+home_header: # text in the header of the home layout
+title: # title - home page text and left link in post header to return to home
+html_title: # for the <title></title> element, which shows in the browser tab and search results
+description: # description of the site for the <meta name="description"></meta> element
 baseurl: ""
-url: "https://kylerego.github.io"
-email: regoky@outlook.com
+url: # url of the website
+email: # your email
 
-github_repo: KyleRego.github.io
-github_username: KyleRego
+github_repo: # the name of the GitHub repo with your Jekyll blog
+github_username: # your GitHub username
 
-linkedin_url: https://www.linkedin.com/in/kyle-rego-117b25139/
+linkedin_url: # url of your linkedin profile
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 
-google_analytics:
+google_analytics: # check out analytics.html; this is your google analytics token
 emoji: 🙃
+
+plugins:
+  - jekyll-sitemap
 
 collections_dir: collections
 
+# change these collections to the names you want
 collections:
   computer_science_notes:
     output: true

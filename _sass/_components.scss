@@ -30,7 +30,6 @@ div.MathJax_Display {
 }
 
 // Return to top of article button
-
 .to-top-container {
   display: none;
 
@@ -49,6 +48,14 @@ div.MathJax_Display {
 }
 
 .prose {
+
+h1, h2, h3, h4, h5, h6 {
+  width: 100%;
+
+  @media (min-width: $breakpoint-lg) {
+    width: (10 / 12 * 100%);
+  }
+}
 
 a {
   text-decoration: underline dotted;
