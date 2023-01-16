@@ -13,7 +13,7 @@
 .h0-small {
   font-size: $h0-mobile * 3 / 5 ;
   line-height: 1.25;
-  margin-top: 0.85em;
+  margin-top: 0;
   word-wrap: break-word;
 
   @media (min-width: $breakpoint-lg) {
@@ -22,6 +22,10 @@
 }
 
 .text-right { text-align: right; }
+
+.cursor-pointer {
+  cursor: pointer;
+}
 
 .no-underline {
   text-decoration: none !important;

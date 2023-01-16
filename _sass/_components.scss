@@ -15,38 +15,6 @@ code {
   padding: 1px 0px;
 }
 
-// MathJax 
-
-div.MathJax_Display {
-  font-size: $prose-font-size;
-  margin-bottom: 1em;
-  max-width: 100%;
-  overflow-y: hidden;
-  overflow-x: auto;
-
-  @media (min-width: $breakpoint-lg) {
-    width: (10 / 12 * 100%);
-  }
-}
-
-// Return to top of article button
-.to-top-container {
-  display: none;
-
-  @media (min-width: $breakpoint-lg) {
-    bottom: 0;
-    position: sticky;
-    display: flex;
-    justify-content: right;
-    height: 3rem;
-  }
-}
-
-.to-top-link {
-  font-size: $prose-font-size;
-  text-decoration: none !important;
-}
-
 .prose {
 
 h1, h2, h3, h4, h5, h6 {
