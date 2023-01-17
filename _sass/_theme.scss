@@ -92,6 +92,7 @@ $homepage-colorful-background-image:
   top: 3rem;
   padding: 0.5rem;
   padding-top: 0;
+  padding-bottom: 0;
   margin: 0;
   box-shadow: 0px 0px 10px 0px $black;
   -webkit-box-shadow: 0px 0px 10px 0px $black;
@@ -113,19 +114,23 @@ $homepage-colorful-background-image:
 }
 
 .top-nav-list {
+  font-size: 16px !important;
   position: relative;
-  list-style-type: circle;
   width: 100% !important;
 
   li {
     list-style-type: disc;
+    font-size: 16px !important;
 
     ol {
       margin-bottom: 0;
+      font-size: 16px !important;
 
       li {
+        list-style-type: circle;
         margin-top: 8px;
         margin-bottom: 8px;
+        font-size: 16px !important;
       }
     }
   }
@@ -135,14 +140,13 @@ $homepage-colorful-background-image:
 .to-top-container {
   display: none;
   z-index: 10;
-
-  @media (min-width: $breakpoint-lg) {
-    bottom: 0;
-    position: sticky;
-    display: flex;
-    justify-content: right;
-    height: 3rem;
-  }
+  padding-bottom: 0.5rem;
+  bottom: 0;
+  position: sticky;
+  display: flex;
+  justify-content: right;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 10;
 }
 
 .to-top-link {

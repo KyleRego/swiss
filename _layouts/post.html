@@ -4,8 +4,9 @@ layout: default
 {% include mathjax.html %}
 <article id="article" class="container px-2 mx-auto mb4" itemscope itemtype="http://schema.org/BlogPosting">
   {% include nav-modal.html %}
-  <h1 class="h0-small col-9 sm-width-full inline-block" itemprop="name headline"
-  >{{ page.title }}</h1>
+  <h1 class="h0-small col-9 sm-width-full inline-block" itemprop="name headline">
+    {{ page.title }}
+  </h1>
 
     <div class="col-4 sm-width-full mt-1 border-top-thin ">
       <p class="mb-3 py-2 bold h4">
@@ -14,16 +15,8 @@ layout: default
     </div>
 
     <div class="prose" itemprop="articleBody">
-        {{ page.excerpt }}
-        <div>
-          {{ content | remove_first:page.excerpt }}
-          {% include book_attribution.html %}
-          {% unless page.short %}
-          <div class="to-top-container">
-            <a href="#article" title="Return to top" class="to-top-link">🎈</a>
-          </div>
-          {% endunless %}
-        </div>
+        {{ content }}
+        {% include book_attribution.html %}
     </div>
 </article>
 

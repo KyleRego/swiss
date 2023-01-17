@@ -1,10 +1,13 @@
 <div class="top-nav-area-container prose">
-  <span id="top-nav-emoji-button" class="cursor-pointer" title="Open navigation menu" hidden>🧭</span>
+  <span id="top-nav-emoji-button" class="cursor-pointer font-2rem" title="Open navigation menu" hidden>🧬</span>
   <div id="top-nav-modal" class="top-nav-modal" hidden>
     <div class="nav-modal-sticky-div">
-      <span id="top-nav-close-button" class="cursor-pointer" title="Close menu">❌</span>
+      <span id="top-nav-close-button" class="cursor-pointer" title="Close navigation menu">✖️</span>
     </div>
     <ol id="top-nav-list" class="top-nav-list"></ol>
+    <div class="to-top-container">
+      <a href="#article" title="Return to the top of the article" class="to-top-link">🎈</a>
+    </div>
   </div>
   <script>
     window.onload = function() {
@@ -27,8 +30,7 @@
         let lastMainListElement = null;
         let lastInnerList = null;
         headings.forEach(element => {
-        if (element.textContent !== "{{ page.title }}") {
-          console.log(element.nodeName);
+        if (element.textContent.trim() !== "{{ page.title }}") {
           const link = document.createElement("a");
           link.textContent = element.textContent;
           link.href = `#${element.id}`;
