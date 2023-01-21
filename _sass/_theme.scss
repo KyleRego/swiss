@@ -75,6 +75,7 @@ $homepage-colorful-background-image:
 
 // Nav button and menu at top of post
 .top-nav-area-container {
+  z-index: 10;
   margin-top: 0.85em;
   top: 20px;
   position: sticky;
@@ -86,7 +87,6 @@ $homepage-colorful-background-image:
 
 .top-nav-menu {
   background: rgba(255, 255, 255, 0.95);
-  z-index: 10;
   position: absolute;
   right: 0;
   top: 3.5rem;
@@ -133,7 +133,6 @@ $homepage-colorful-background-image:
 
 // MathJax 
 div.MathJax_Display {
-  z-index: -1;
   font-size: $prose-font-size;
   margin-bottom: 1em;
   max-width: 100%;
@@ -143,8 +142,4 @@ div.MathJax_Display {
   @media (min-width: $breakpoint-lg) {
     width: (10 / 12 * 100%);
   }
-}
-
-.MathJax span {
-  z-index: -1;
 }
