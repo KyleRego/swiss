@@ -5,13 +5,5 @@ date:
 categories:
 permalink:
 emoji:
-short:
 mathjax:
-book_review:
-book_title:
-book_author: 
-book_publisher: 
-book_isbn: 
-book_link:
-note_category:
 ---

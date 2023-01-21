@@ -1,0 +1,57 @@
+<div class="top-nav-area-container prose">
+  <span id="top-nav-emoji-button" class="cursor-pointer font-size-menu-button" title="Open navigation menu" hidden>🧬</span>
+  <div id="top-nav-menu" class="top-nav-menu" hidden>
+    <ol id="top-nav-list" class="top-nav-list"></ol>
+  </div>
+  <script>
+    window.onload = function() {
+      const topNavEmojiButton = document.querySelector("#top-nav-emoji-button");
+      const menu = document.querySelector("#top-nav-menu");
+      topNavEmojiButton.addEventListener("click", () => {
+        if (menu.hidden) {
+          menu.hidden = false;
+          topNavEmojiButton.textContent = "✖️";
+          topNavEmojiButton.title = "Close navigation menu";
+        } else {
+          menu.hidden = true;
+          topNavEmojiButton.textContent = "🧬";
+          topNavEmojiButton.title = "Open navigation menu";
+        }
+      });
+
+      const topNavList = document.querySelector("#top-nav-list");
+      const headings = document.querySelectorAll("h1, h2");
+      if (headings.length > 1) {
+        topNavEmojiButton.hidden = false;
+        let lastMainListElement = null;
+        let lastInnerList = null;
+        headings.forEach(element => {
+          const link = document.createElement("a");
+          link.textContent = element.textContent;
+          link.href = `#${element.id}`;
+          if (element.textContent.trim() === "{{ page.title }}") {
+            const menuHeader = document.createElement("div");
+            menuHeader.classList.add("menu-article-title");
+            menuHeader.appendChild(link);
+            menu.insertBefore(menuHeader, topNavList);
+          } else {
+            const listElement = document.createElement("li");
+            listElement.appendChild(link);
+            if (element.nodeName === "H1") {
+              lastMainListElement = listElement;
+              lastInnerList = document.createElement("ol");
+              listElement.appendChild(lastInnerList);
+              topNavList.appendChild(listElement);
+            } else if (element.nodeName === "H2") {
+              if (lastInnerList) {
+                lastInnerList.appendChild(listElement);
+              } else {
+                topNavList.appendChild(listElement);
+              }
+            }
+          }
+        })
+      };
+    }
+  </script>
+</div>

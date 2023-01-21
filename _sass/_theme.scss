@@ -73,7 +73,7 @@ $homepage-colorful-background-image:
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Nav button and modal at top of post
+// Nav button and menu at top of post
 .top-nav-area-container {
   margin-top: 0.85em;
   top: 20px;
@@ -84,33 +84,28 @@ $homepage-colorful-background-image:
   height: 3rem;
 }
 
-.top-nav-modal {
+.top-nav-menu {
   background: rgba(255, 255, 255, 0.95);
   z-index: 10;
   position: absolute;
   right: 0;
-  top: 3rem;
+  top: 3.5rem;
   padding: 0.5rem;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 1rem;
   margin: 0;
   box-shadow: 0px 0px 10px 0px $black;
   -webkit-box-shadow: 0px 0px 10px 0px $black;
   -moz-box-shadow: 0px 0px 10px 0px $black;
-  border-radius: 10px 0 0 10px;
   max-width: 25rem;
   max-height: 20rem;
   overflow-y: scroll;
 }
 
-.nav-modal-sticky-div {
-  padding-top: 0.5rem;
-  top: 0;
-  position: sticky;
-  display: flex;
-  justify-content: right;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 10;
+.menu-article-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-bottom: 0.5rem;
 }
 
 .top-nav-list {
@@ -134,24 +129,6 @@ $homepage-colorful-background-image:
       }
     }
   }
-}
-
-// Return to top of post button
-.to-top-container {
-  display: none;
-  z-index: 10;
-  padding-bottom: 0.5rem;
-  bottom: 0;
-  position: sticky;
-  display: flex;
-  justify-content: right;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 10;
-}
-
-.to-top-link {
-  font-size: $prose-font-size;
-  text-decoration: none !important;
 }
 
 // MathJax 

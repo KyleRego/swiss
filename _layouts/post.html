@@ -3,7 +3,7 @@ layout: default
 ---
 {% include mathjax.html %}
 <article id="article" class="container px-2 mx-auto mb4" itemscope itemtype="http://schema.org/BlogPosting">
-  {% include nav-modal.html %}
+  {% include nav-menu.html %}
   <h1 class="h0-small col-9 sm-width-full inline-block" itemprop="name headline">
     {{ page.title }}
   </h1>
@@ -16,7 +16,6 @@ layout: default
 
     <div class="prose" itemprop="articleBody">
         {{ content }}
-        {% include book_attribution.html %}
     </div>
 </article>
 
