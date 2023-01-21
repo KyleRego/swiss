@@ -20,11 +20,11 @@
       });
 
       const topNavList = document.querySelector("#top-nav-list");
-      const headings = document.querySelectorAll("h1, h2");
+      const headings = document.querySelectorAll("h1, h2, h3");
       if (headings.length > 1) {
         topNavEmojiButton.hidden = false;
-        let lastMainListElement = null;
         let lastInnerList = null;
+        let lastInnerInnerList = null;
         headings.forEach(element => {
           const link = document.createElement("a");
           link.textContent = element.textContent;
@@ -38,12 +38,21 @@
             const listElement = document.createElement("li");
             listElement.appendChild(link);
             if (element.nodeName === "H1") {
-              lastMainListElement = listElement;
               lastInnerList = document.createElement("ol");
               listElement.appendChild(lastInnerList);
               topNavList.appendChild(listElement);
             } else if (element.nodeName === "H2") {
+              lastInnerInnerList = document.createElement("ol");
+              listElement.appendChild(lastInnerInnerList);
               if (lastInnerList) {
+                lastInnerList.appendChild(listElement);
+              } else {
+                topNavList.appendChild(listElement);
+              }
+            } else if (element.nodeName === "H3" ) {
+              if (lastInnerInnerList) {
+                lastInnerInnerList.appendChild(listElement);
+              } else if (lastInnerList) {
                 lastInnerList.appendChild(listElement);
               } else {
                 topNavList.appendChild(listElement);
