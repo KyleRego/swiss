@@ -151,6 +151,12 @@
 
 .mt-6 { margin-top: $spacer-4 * 1.5;}
 
+.margin-equal {
+  display: block;
+  margin: auto;
+  width: max-content;
+}
+
 // Responsive margin
 @media (min-width: 52em) {
   .mx-lg-auto { margin-left: auto; margin-right: auto; }
