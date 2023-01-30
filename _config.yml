@@ -35,3 +35,5 @@ collections:
     output: true
   linklogs:
     output: true
+  miscellaneas:
+    output: true
