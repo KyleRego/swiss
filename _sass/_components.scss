@@ -100,7 +100,9 @@ dd {
 table {
   border-collapse: collapse;
   display: block;
-  width: 100%;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
   margin-bottom: 1.5em;
   overflow: auto;
   // For Firefox to horizontally scroll wider tables.
