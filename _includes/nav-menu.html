@@ -30,6 +30,7 @@
           link.textContent = element.textContent;
           link.href = `#${element.id}`;
           if (element.textContent.trim() === "{{ page.title }}") {
+            link.href = "#";
             const menuHeader = document.createElement("div");
             menuHeader.classList.add("menu-article-title");
             menuHeader.appendChild(link);
