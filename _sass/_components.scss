@@ -45,6 +45,12 @@ p, ol, ul {
   width: 100%;
 }
 
+p, ul {
+  @media (min-width: 52em) {
+    width: (10 / 12 * 100%); 
+  }
+}
+
 ul, ol {
   padding-left: 40px;
 
