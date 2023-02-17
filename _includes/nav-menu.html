@@ -4,7 +4,7 @@
     <ol id="top-nav-list" class="top-nav-list"></ol>
   </div>
   <script>
-    window.onload = function() {
+    const setupNavMenu = function() {
       const topNavEmojiButton = document.querySelector("#top-nav-emoji-button");
       const menu = document.querySelector("#top-nav-menu");
       topNavEmojiButton.addEventListener("click", () => {

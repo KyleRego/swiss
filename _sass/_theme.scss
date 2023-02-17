@@ -131,6 +131,32 @@ $homepage-colorful-background-image:
   }
 }
 
+figure {
+  position: relative; // toggle figure collapse needs a positioned parent element
+}
+
+.toggle-figure-collapse-button-container {
+  position: absolute;
+  z-index: 100;
+  width: (10 / 12 * 100%); 
+  text-align: center;
+}
+
+.toggle-figure-collapse-button-container-initial-position {
+  top: -48px;
+}
+
+.toggle-figure-collapse-button-container-collapsed-position {
+  top: -32px;
+}
+
+.toggle-figure-collapse-button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+}
+
 // MathJax 
 div.MathJax_Display {
   font-size: $prose-font-size;

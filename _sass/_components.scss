@@ -9,6 +9,10 @@ pre {
   overflow-x: auto;
 }
 
+.pre-double-margin-top {
+  margin: $spacer-4 0 $spacer-3 0;
+}
+
 code {
   color: $color-code;
   font-size: $body-font-size;

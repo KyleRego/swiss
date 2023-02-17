@@ -48,7 +48,7 @@
 
       <div class="container mx-auto px-2 py-4">
         {% for post in site.posts %}
-          {% include post_block.html %}
+          {% include post-block.html %}
         {% endfor %}
 
         <h2 id="notes" class="lh-condensed col-9 mt-4">
@@ -60,7 +60,7 @@
             <ul>
               {% assign physics_notes = site.physics_notes | sort: "title" %}
               {% for post in physics_notes %}
-                {% include note_block.html %}
+                {% include note-block.html %}
               {% endfor %}
             </ul></li>
 
@@ -68,7 +68,7 @@
             <ul>
               {% assign computer_science_notes = site.computer_science_notes | sort: "title" %}
               {% for post in computer_science_notes %}
-                {% include note_block.html %}
+                {% include note-block.html %}
               {% endfor %}
             </ul></li>
 
@@ -76,7 +76,7 @@
             <ul>
               {% assign software_development_notes = site.software_development_notes | sort: "title" %}
               {% for post in software_development_notes %}
-                {% include note_block.html %}
+                {% include note-block.html %}
               {% endfor %}
             </ul></li>
         </ul>
@@ -85,7 +85,7 @@
           <ul>
             {% assign linklogs = site.linklogs | sort: "title" %}
             {% for post in linklogs %}
-              {% include note_block.html %}
+              {% include note-block.html %}
             {% endfor %}
           </ul>
       </div>
