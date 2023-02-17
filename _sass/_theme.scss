@@ -79,9 +79,7 @@ $homepage-colorful-background-image:
   margin-top: 0.85em;
   top: 20px;
   position: sticky;
-  display: flex;
-  justify-content: right;
-  align-items: flex-end;
+  float: right;
   height: 3rem;
 }
 
@@ -97,6 +95,7 @@ $homepage-colorful-background-image:
   -webkit-box-shadow: 0px 0px 10px 0px $black;
   -moz-box-shadow: 0px 0px 10px 0px $black;
   max-width: 25rem;
+  width: max-content;
   max-height: 20rem;
   overflow-y: scroll;
 }
@@ -137,7 +136,6 @@ figure {
 
 .toggle-figure-collapse-button-container {
   position: absolute;
-  z-index: 100;
   width: (10 / 12 * 100%); 
   text-align: center;
 }

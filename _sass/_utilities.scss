@@ -11,6 +11,7 @@
 }
 
 .h0-small {
+  margin-top: $spacer-3 !important;
   font-size: $h0-mobile * 3 / 5 ;
   line-height: 1.25;
   margin-top: 0;
@@ -22,10 +23,6 @@
 }
 
 .text-right { text-align: right; }
-
-.font-size-menu-button {
-  font-size: 1.5rem;
-}
 
 .cursor-pointer {
   cursor: pointer;
