@@ -6,33 +6,41 @@
   const setupFigureCollapsing = function() {
     const figures = document.querySelectorAll("figure");
     figures.forEach( (figure) => {
-      if (figure.offsetHeight > 500) {
+      const max = 11111;
+      const min = 1;
+      const randomId = String(Math.floor(Math.random() * (max - min + 1) + min));
+      const figureHeight = figure.offsetHeight;
+      if (figureHeight > 750) {
+        const extraDiv = document.createElement("div");
+        extraDiv.classList.add("some-extra-space");
+        extraDiv.id = randomId;
+        figure.prepend(extraDiv);
         const collapseButtonContainer = document.createElement("div");
         collapseButtonContainer.classList.add("toggle-figure-collapse-button-container");
         collapseButtonContainer.classList.add("toggle-figure-collapse-button-container-initial-position");
-        figure.prepend(collapseButtonContainer);
-        const collapseButton = document.createElement("button");
-        collapseButton.type = "button";
-        collapseButton.innerHTML = hideSVG;
+
+        const collapseButton = document.createElement("a");
+
         collapseButton.title = hiddenTitle;
         collapseButton.classList.add("toggle-figure-collapse-button");
+        collapseButton.href = `#${randomId}`;
+        collapseButton.innerHTML = hideSVG;
+        
         collapseButtonContainer.appendChild(collapseButton);
+  
         const preElement = figure.querySelector("pre");
-        preElement.classList.add("pre-double-margin-top");
-        const figureElementToHide = figure.querySelector("pre code");
+        preElement.prepend(collapseButtonContainer);
+
+        const figureChildElementToHide = figure.querySelector("pre code");
         collapseButton.addEventListener("click", () => {
-          if (figureElementToHide.hidden) {
-            figureElementToHide.hidden = false;
+          if (figureChildElementToHide.hidden) {
+            figureChildElementToHide.hidden = false;
             collapseButton.innerHTML = hideSVG;
             collapseButton.title = shownTitle;
-            collapseButtonContainer.classList.remove("toggle-figure-collapse-button-container-collapsed-position");
-            collapseButtonContainer.classList.add("toggle-figure-collapse-button-container-initial-position");
           } else {
-            figureElementToHide.hidden = true;
+            figureChildElementToHide.hidden = true;
             collapseButton.innerHTML = showSVG;
             collapseButton.title = hiddenTitle;
-            collapseButtonContainer.classList.remove("toggle-figure-collapse-button-container-initial-position");
-            collapseButtonContainer.classList.add("toggle-figure-collapse-button-container-collapsed-position");
           }
         });
       }

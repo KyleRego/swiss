@@ -130,25 +130,19 @@ $homepage-colorful-background-image:
   }
 }
 
-figure {
-  position: relative; // toggle figure collapse needs a positioned parent element
-}
-
 .toggle-figure-collapse-button-container {
-  position: absolute;
-  width: (10 / 12 * 100%); 
-  text-align: center;
+  position: sticky;
+  height: 32px;
+  top: 20px;
+  width: calc(100% - 70px);
 }
 
-.toggle-figure-collapse-button-container-initial-position {
-  top: -48px;
-}
-
-.toggle-figure-collapse-button-container-collapsed-position {
-  top: -32px;
+.some-extra-space {
+  height: 20px;
 }
 
 .toggle-figure-collapse-button {
+  float: right;
   cursor: pointer;
   background: transparent;
   border: none;
