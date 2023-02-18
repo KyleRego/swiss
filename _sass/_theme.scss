@@ -73,6 +73,19 @@ $homepage-colorful-background-image:
   -moz-osx-font-smoothing: grayscale;
 }
 
+.site-nav-area-container {
+  z-index: 10;
+  margin-top: 0.85em;
+  top: 20px;
+  right: 32px;
+  position: sticky;
+  height: 3rem;
+}
+
+.open-site-nav-button {
+  float: right;
+}
+
 // Nav button and menu at top of post
 .top-nav-area-container {
   z-index: 10;
@@ -112,23 +125,25 @@ $homepage-colorful-background-image:
 }
 
 .top-nav-list {
-  font-size: 16px !important;
-  position: relative;
+  position: relative !important;
   width: 100% !important;
+  font-size: 16px !important;
+  margin: 0 !important;
+  margin-bottom: 8px !important;
 
   li {
     list-style-type: disc;
     font-size: 16px !important;
+    margin: 0 !important;
+    margin-bottom: 8px !important;
 
     ol {
-      margin-bottom: 0;
-      font-size: 16px !important;
-
+      margin-top: 8px !important;
       li {
         list-style-type: circle;
-        margin-top: 8px;
-        margin-bottom: 8px;
         font-size: 16px !important;
+        margin: 0 !important;
+        margin-bottom: 8px !important;
       }
     }
   }
