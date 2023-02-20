@@ -5,15 +5,12 @@
   const shownTitle = "Collapse figure";
   const setupFigureCollapsing = function() {
     const figures = document.querySelectorAll("figure");
-    figures.forEach( (figure) => {
-      const max = 11111;
-      const min = 1;
-      const randomId = String(Math.floor(Math.random() * (max - min + 1) + min));
+    figures.forEach( (figure, index) => {
       const figureHeight = figure.offsetHeight;
       if (figureHeight > 750) {
         const extraDiv = document.createElement("div");
         extraDiv.classList.add("some-extra-space");
-        extraDiv.id = randomId;
+        extraDiv.id = index;
         figure.prepend(extraDiv);
         const collapseButtonContainer = document.createElement("div");
         collapseButtonContainer.classList.add("toggle-figure-collapse-button-container");
@@ -23,7 +20,7 @@
 
         collapseButton.title = hiddenTitle;
         collapseButton.classList.add("toggle-figure-collapse-button");
-        collapseButton.href = `#${randomId}`;
+        collapseButton.href = `#${index}`;
         collapseButton.innerHTML = hideSVG;
         
         collapseButtonContainer.appendChild(collapseButton);
@@ -37,10 +34,12 @@
             figureChildElementToHide.hidden = false;
             collapseButton.innerHTML = hideSVG;
             collapseButton.title = shownTitle;
+            collapseButton.removeAttribute("href");
           } else {
             figureChildElementToHide.hidden = true;
             collapseButton.innerHTML = showSVG;
             collapseButton.title = hiddenTitle;
+            collapseButton.href = `#${index}`;
           }
         });
       }
