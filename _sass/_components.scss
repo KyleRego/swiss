@@ -48,12 +48,13 @@ cite {
 
 p, ol, ul {
   font-size: $prose-font-size;
-  margin-top: 1em;
-  margin-bottom: 1em;
   width: 100%;
 }
 
-p, ul {
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+
   @media (min-width: 52em) {
     width: (10 / 12 * 100%); 
   }
