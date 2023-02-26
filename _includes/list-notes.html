@@ -1,25 +1,6 @@
 <ul>
-  <li><h3 class="mb-0 mt-1">Physics</h3>
-  <ul class="mt-0">
-    {% assign physics_notes = site.physics_notes | sort: "title" %}
-    {% for post in physics_notes %}
-      {% include note-block.html %}
-    {% endfor %}
-  </ul></li>
-
-  <li><h3 class="mb-0 mt-1">Computer Science</h3>
-  <ul class="mt-0">
-    {% assign computer_science_notes = site.computer_science_notes | sort: "title" %}
-    {% for post in computer_science_notes %}
-      {% include note-block.html %}
-    {% endfor %}
-  </ul></li>
-
-  <li><h3 class="mb-0 mt-1">Software development</h3>
-  <ul class="mt-0">
-    {% assign software_development_notes = site.software_development_notes | sort: "title" %}
-    {% for post in software_development_notes %}
-      {% include note-block.html %}
-    {% endfor %}
-  </ul></li>
+  {% assign notes = site.notes | sort: "title" %}
+  {% for post in notes %}
+    {% include note-block.html %}
+  {% endfor %}
 </ul>
