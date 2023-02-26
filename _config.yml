@@ -26,14 +26,24 @@ plugins:
 collections_dir: collections
 
 # change these collections to the names you want
+
 collections:
-  computer_science_notes:
-    output: true
-  physics_notes:
-    output: true
-  software_development_notes:
+  notes:
     output: true
   linklogs:
     output: true
-  miscellaneas:
+  reviews:
     output: true
+
+# e.g.
+# collections:
+#   computer_science_notes:
+#     output: true
+#   physics_notes:
+#     output: true
+#   software_development_notes:
+#     output: true
+#   linklogs:
+#     output: true
+#   miscellaneas:
+#     output: true

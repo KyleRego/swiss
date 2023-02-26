@@ -32,13 +32,10 @@
                 <a href="mailto:{{ site.email }}" title="Email me😃">{% include svg-email.html %}</a>
               </div>
               <div class="border-left-thin inline-block mt-2 pt-1 pl-1">
-                <a href="#notes" title="Notes">{% include svg-book.html %}</a>
-              </div>
-              <div class="inline-block mt-2 pt-1 pl-1">
-                <a href="#linklogs" title="Linklogs">{% include svg-link-log.html %}</a>
-              </div>
-              <div class="inline-block mt-2 pt-1 pl-1">
                 <a href="assets/resume.pdf" title="Resume">{% include svg-resume.html %}</a>
+              </div>
+              <div class="inline-block mt-2 pt-1 pl-1">
+                <a href="#sitemap" title="Sitemap">{% include svg-sitemap.html %}</a>
               </div>
             </div>
           </div>
@@ -52,15 +49,35 @@
           {% include post-block.html %}
         {% endfor %}
 
-        <h2 id="notes" class="lh-condensed col-9 mt-4 mb-0">Notes</h2>
-        <div class="prose sm-width-full">
-          {% include list-notes.html %}
-        </div>
+        <h2 id="sitemap" class="lh-condensed col-9 mt-4">
+          Sitemap
+        </h2>
+        <div class="prose mt-1 sm-width-full">
+          <ul>
+            <li><h3 class="mt-1">Notes</h3>
+            <div class="prose sm-width-full">
+            {% include list-notes.html %}
+            </div></li>
 
-        <h2 id="linklogs" class="lh-condensed col-9 mt-4 mb-0">Linklogs</h2>
-        <div class="prose sm-width-full">
-          {% include list-linklogs.html %}
-        </div>
+            <li><h3 class="mt-1">Reviews</h3>
+            <div class="prose sm-width-full">
+            {% include list-reviews.html %}
+            </div></li>
+
+            <li><h3 class="mt-1">Link collections</h3>
+            <div class="prose sm-width-full">
+            {% include list-linklogs.html %}
+            </div></li>
+
+            <li><h3 class="mt-1">Miscellaneous</h3>
+            <div class="prose sm-width-full">
+            <ul>
+              <li class="mb-1 prose mt-0">
+                <a class="link-primary" href="/anki_record_docs" title="/anki_record_docs">AnkiRecord gem documentation</a>
+              </li>
+            </ul>
+            </div></li>
+        </ul>
       </div>
     </div>
 

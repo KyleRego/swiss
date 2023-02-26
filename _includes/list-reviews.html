@@ -1,0 +1,6 @@
+<ul>
+  {% assign reviews = site.reviews | sort: "title" %}
+  {% for post in reviews %}
+    {% include note-block.html %}
+  {% endfor %}
+</ul>
