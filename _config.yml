@@ -30,10 +30,6 @@ collections_dir: collections
 collections:
   notes:
     output: true
-  linklogs:
-    output: true
-  reviews:
-    output: true
 
 # e.g.
 # collections:
