@@ -47,19 +47,6 @@ $color-text-accent: $blue !default;
 $color-code: $blue !default;
 $color-primary-link: $blue !default;
 
-$homepage-colorful-background-image: 
-  linear-gradient(0deg, rgba(255, 255, 255, 1), 70%,
-                          rgba(255, 255, 255, 0)),
-
-  linear-gradient(70deg, rgba(28, 250, 46, 0.9) 15%,
-                            rgba(252, 255, 101, 0) 45%),
-
-  linear-gradient(164deg, rgb(117, 246, 255) 15%,
-                             rgba(70, 255, 188, 0) 45%),
-
-  linear-gradient(100deg, rgb(138, 255, 109) 5%,
-                            rgb(204, 0, 255) 90%);
-
 // Import sass partials
 @import
         "base",
@@ -67,6 +54,25 @@ $homepage-colorful-background-image:
         "utilities",
         "syntax-highlighting"
 ;
+
+.home-colorful-background { 
+  background: linear-gradient(164deg, 
+   rgba(0, 238, 255, 0.726), rgba(247, 0, 255, 0.466) 75%);
+  background-size: 200% 200%;
+  animation: gradient 30s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 
 .font-smoothing {
   -webkit-font-smoothing: antialiased;
