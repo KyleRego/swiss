@@ -10,8 +10,8 @@ pre {
   max-height: 75vh;
 
   @media (min-width: $breakpoint-lg) {
-    white-space: pre-wrap;
-    overflow: visible;
+    overflow-x: scroll;
+    overflow-y: hidden;
     max-height: none;
   }
 }
